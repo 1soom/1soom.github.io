@@ -27,17 +27,17 @@ export default function Header() {
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <a href="#section2" onClick={handleClick}>
+            <a href="#story" onClick={handleClick}>
               브랜드 스토리
             </a>
           </li>
           <li className={styles.navItem}>
-            <a href="#section3" onClick={handleClick}>
+            <a href="#project" onClick={handleClick}>
               프로젝트
             </a>
           </li>
           <li className={styles.navItem}>
-            <a href="#section4" onClick={handleClick}>
+            <a href="#contact" onClick={handleClick}>
               한 숨 쉬어가기
             </a>
           </li>

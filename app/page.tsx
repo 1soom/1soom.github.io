@@ -9,7 +9,7 @@ import ScrollIndicator from "./components/ScrollIndicator";
 import ProjectGallery from "./components/ProjectGallery";
 
 export default function Home() {
-  const sections = useRef<(HTMLDivElement | null)[]>([]);
+  const sections = useRef<(HTMLDivElement | undefined)[]>([]);
   const [showHeader, setShowHeader] = useState(false);
   const [breathCount, setBreathCount] = useState("0.0");
   const [sighCount, setSighCount] = useState("0.0");
@@ -81,7 +81,7 @@ export default function Home() {
         <section
           ref={(el) => (sections.current[1] = el)}
           className={styles.section}
-          id="section2"
+          id="story"
         >
           <BrandStory />
         </section>
@@ -89,7 +89,7 @@ export default function Home() {
         <section
           ref={(el) => (sections.current[2] = el)}
           className={styles.section}
-          id="section3"
+          id="project"
         >
           <ProjectGallery />
         </section>
@@ -97,7 +97,7 @@ export default function Home() {
         <section
           ref={(el) => (sections.current[3] = el)}
           className={styles.section}
-          id="section4"
+          id="contact"
         >
           <div className={styles.sectionContent}>
             <div className={styles.breathStats}>
