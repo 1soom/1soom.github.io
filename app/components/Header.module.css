@@ -57,3 +57,13 @@
         padding: 6px 12px;
     }
 }
+
+@media (max-width: 480px) {
+    .header {
+        min-width: 90%;
+    }
+
+    .navItem a {
+        font-size: 0.9rem;
+    }
+}
