@@ -9,7 +9,7 @@ import ScrollIndicator from "./components/ScrollIndicator";
 import ProjectGallery from "./components/ProjectGallery";
 
 export default function Home() {
-  const sections = useRef<(HTMLDivElement | undefined)[]>([]);
+  const sections = useRef<(HTMLElement | null)[]>([]);
   const [showHeader, setShowHeader] = useState(false);
   const [breathCount, setBreathCount] = useState("0.0");
   const [sighCount, setSighCount] = useState("0.0");
@@ -21,9 +21,7 @@ export default function Home() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add(styles.visible);
-            const index = sections.current.indexOf(
-              entry.target as HTMLDivElement
-            );
+            const index = sections.current.indexOf(entry.target as HTMLElement);
             setShowHeader(index >= 1);
           } else {
             entry.target.classList.remove(styles.visible);
@@ -61,7 +59,9 @@ export default function Home() {
       {showHeader && <Header />}
       <main className={styles.main}>
         <section
-          ref={(el) => (sections.current[0] = el)}
+          ref={(el) => {
+            sections.current[0] = el;
+          }}
           className={styles.section}
           id="section1"
         >
@@ -79,7 +79,9 @@ export default function Home() {
         </section>
 
         <section
-          ref={(el) => (sections.current[1] = el)}
+          ref={(el) => {
+            sections.current[1] = el;
+          }}
           className={styles.section}
           id="story"
         >
@@ -87,7 +89,9 @@ export default function Home() {
         </section>
 
         <section
-          ref={(el) => (sections.current[2] = el)}
+          ref={(el) => {
+            sections.current[2] = el;
+          }}
           className={styles.section}
           id="project"
         >
@@ -95,7 +99,9 @@ export default function Home() {
         </section>
 
         <section
-          ref={(el) => (sections.current[3] = el)}
+          ref={(el) => {
+            sections.current[3] = el;
+          }}
           className={styles.section}
           id="contact"
         >
