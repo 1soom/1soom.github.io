@@ -18,15 +18,15 @@
 .arrow {
     width: 20px;
     height: 20px;
-    border-right: 2px solid rgba(var(--gray-rgb), 0.8);
-    border-bottom: 2px solid rgba(var(--gray-rgb), 0.8);
+    border-right: 2px solid var(--gray-100);
+    border-bottom: 2px solid var(--gray-100);
     transform: rotate(45deg);
     animation: float 2s ease-in-out infinite;
 }
 
 .text {
     font-size: 0.8rem;
-    color: rgba(var(--gray-rgb), 0.8);
+    color: var(--gray-100);
     letter-spacing: 0.1em;
 }
 

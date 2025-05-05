@@ -1,6 +1,15 @@
 :root {
+  --gray-000: #EAEAEB;
+  --gray-100: #D6D6D6;
+  --gray-200: #C5C5C5;
+  --gray-300: #626262;
+  --gray-400: #595959;
+  --gray-500: #454446;
+  --gray-600: #3B3B3B;
+  --gray-700: #302F31;
+
   --background: #252426;
-  --text-color: #ffffff;
+  --text-white: #ffffff;
   --primary: #6946B3;
 }
 
@@ -18,7 +27,7 @@ body {
 }
 
 body {
-  color: var(--text-color);
+  color: var(--text-white);
   background: var(--background);
   font-family: 'Pretendard', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
