@@ -103,10 +103,14 @@
 }
 
 .breathText {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: rgba(var(--gray-rgb), 0.8);
   word-break: keep-all;
+}
+
+.mobileBreak {
+  display: none;
 }
 
 .contactText {
@@ -127,6 +131,10 @@
     gap: 20px;
     margin-top: 32px;
     max-width: 80%;
+  }
+
+  .mobileBreak {
+    display: block;
   }
 }
 

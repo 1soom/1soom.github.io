@@ -109,8 +109,9 @@ export default function Home() {
             <div className={styles.breathStats}>
               <p className={styles.breathText}>
                 지금까지 <span className={styles.highlight}>{breathCount}</span>{" "}
-                번의 숨과 <span className={styles.highlight}>{sighCount}</span>{" "}
-                번의 한숨을 쉬었습니다.
+                번의 숨과 <br className={styles.mobileBreak} />
+                <span className={styles.highlight}>{sighCount}</span> 번의
+                한숨을 쉬었습니다.
               </p>
               <p className={styles.contactText}>
                 아이디어든, 피드백이든, 함께하고 싶다는 마음이든, 한숨 한 번
